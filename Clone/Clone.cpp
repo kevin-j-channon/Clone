@@ -69,6 +69,11 @@ namespace clone
 			: m_if{ other.m_if->clone() }
 		{}
 
+		~Wrapper()
+		{
+			delete m_if;
+		}
+
 		Wrapper& operator=(Wrapper& other)
 		{
 			delete m_if;
